@@ -7,6 +7,7 @@
 //
 
 #import "NSIndexSet+Convenience.h"
+#import <UIKit/UIKit.h>
 
 @implementation NSIndexSet (Convenience)
 

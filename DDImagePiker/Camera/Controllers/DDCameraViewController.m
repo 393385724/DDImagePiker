@@ -11,6 +11,9 @@
 #import "DDCameraBottomView.h"
 #import "DDAVCamera.h"
 
+#import <DDCoreCategory/DDCategoryHeader.h>
+
+
 @interface DDCameraViewController ()<DDAVCameraDelegate,DDCameraNavigationBarDelegate,DDCameraBottomViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic, strong) DDCameraNavigationBar *navigationBar;

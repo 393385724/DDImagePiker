@@ -9,6 +9,7 @@
 #import "DDAssetHandle.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
+#import <UIKit/UIKit.h>
 
 #import "NSIndexSet+Convenience.h"
 

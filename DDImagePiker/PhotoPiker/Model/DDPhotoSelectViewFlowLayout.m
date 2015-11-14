@@ -7,6 +7,8 @@
 //
 
 #import "DDPhotoSelectViewFlowLayout.h"
+#import <DDCoreCategory/DDCategoryHeader.h>
+
 
 @implementation DDPhotoSelectViewFlowLayout
 

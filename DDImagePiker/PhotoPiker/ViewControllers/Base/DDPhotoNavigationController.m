@@ -7,6 +7,7 @@
 //
 
 #import "DDPhotoNavigationController.h"
+#import <DDCoreCategory/DDCategoryHeader.h>
 
 @interface DDPhotoNavigationController ()
 

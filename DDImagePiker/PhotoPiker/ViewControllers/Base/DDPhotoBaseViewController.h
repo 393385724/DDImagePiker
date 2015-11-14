@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <DDCoreCategory/DDCategoryHeader.h>
 
 extern NSString *const DDPhotoPikerDidFinishedImageNotification;
 extern NSString *const DDPhotoPikerDidCancelNotification;

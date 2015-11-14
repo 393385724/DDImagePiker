@@ -7,8 +7,8 @@
 //
 
 #import "DDAVCamera.h"
-#import <UIKit/UIKit.h>
 #import <ImageIO/ImageIO.h>
+#import <DDCoreCategory/DDCategoryHeader.h>
 
 @interface DDAVCamera ()
 

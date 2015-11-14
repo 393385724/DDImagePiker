@@ -7,6 +7,8 @@
 //
 
 #import "DDCameraBottomView.h"
+#import <UIKit/UIKit.h>
+#import <DDCoreCategory/DDCategoryHeader.h>
 
 @interface DDCameraBottomView ()
 

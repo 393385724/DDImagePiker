@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //资源选取途径
 typedef NS_ENUM(NSInteger, DDImagePickerSourceType) {

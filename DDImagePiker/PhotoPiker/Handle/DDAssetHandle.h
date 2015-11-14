@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <DDCoreCategory/DDCategoryHeader.h>
 #import "DDAssetGroup.h"
 #import "DDAsset.h"
 

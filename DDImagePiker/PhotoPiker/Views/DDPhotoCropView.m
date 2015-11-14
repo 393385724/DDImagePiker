@@ -7,6 +7,8 @@
 //
 
 #import "DDPhotoCropView.h"
+#import <UIKit/UIKit.h>
+#import <DDCoreCategory/DDCategoryHeader.h>
 
 @interface DDPhotoCropView () <UIScrollViewDelegate>
 
