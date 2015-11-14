@@ -1,0 +1,13 @@
+PODS:
+  - DDCoreCategory (0.0.8):
+    - SSKeychain (~> 1.2.3)
+  - SSKeychain (1.2.3)
+
+DEPENDENCIES:
+  - DDCoreCategory
+
+SPEC CHECKSUMS:
+  DDCoreCategory: f209100d2c794aaf8e0a3e0ccf3060faed990aab
+  SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
+
+COCOAPODS: 0.39.0

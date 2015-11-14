@@ -75,8 +75,8 @@ NSInteger const DDAlbumImageSize = 40;
     }
     if ([UIDevice ddBelow8]) {
         ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
-        if (status == kCLAuthorizationStatusRestricted ||
-            status ==kCLAuthorizationStatusDenied){
+        if (status == ALAuthorizationStatusRestricted ||
+            status ==ALAuthorizationStatusDenied){
             handler(NO);
         }
         else {

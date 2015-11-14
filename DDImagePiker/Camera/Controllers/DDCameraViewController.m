@@ -57,11 +57,9 @@
             [self.camera startRunning];
         }
         else {
-            RIButtonItem *cancelItem = [RIButtonItem itemWithLabel:@"取消"];
-            RIButtonItem *confirmItem = [RIButtonItem itemWithLabel:@"设置" action:^{
-                [[UIApplication sharedApplication] openURL: [NSURL URLWithString: UIApplicationOpenSettingsURLString]];
-            }];
-            [[[UIAlertView alloc] initWithTitle:@"无法开启相机,请点击设置开放权限" message:nil cancelButtonItem:cancelItem otherButtonItems:confirmItem, nil] show];
+            UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:@"无法开启相机,请点击设置开放权限" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+            alterView.tag = 1001;
+            [alterView show];
         }
     }];
 }
@@ -124,6 +122,7 @@
 
 - (void)camera:(DDAVCamera *)camera didFailWithError:(NSError *)error{
     UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:@"camera failed" message:error.localizedDescription delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"重新拍照", nil];
+    alterView.tag = 1000;
     [alterView show];
 }
 
@@ -165,11 +164,19 @@
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 0) {
-        [self cameraBottomBarCancelButtonAction];
+    if (alertView.tag == 1000) {
+        if (buttonIndex == 0) {
+            [self cameraBottomBarCancelButtonAction];
+        }
+        else {
+            [self.camera startRunning];
+        }
     }
-    else {
-        [self.camera startRunning];
+    
+    if (alertView.tag == 1001) {
+        if (buttonIndex == 1) {
+            [[UIApplication sharedApplication] openURL: [NSURL URLWithString: UIApplicationOpenSettingsURLString]];
+        }
     }
 }
 

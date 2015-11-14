@@ -14,12 +14,9 @@ Pod::Spec.new do |s|
   # s.osx.deployment_target = '10.7'  
   s.requires_arc = true  
   
-  s.source_files = 'DDImagePiker/*'  
-  # s.resources = 'Assets'  
+  s.source_files = 'DDImagePiker/**/**/*.{h,m}' 
+  s.resources = 'DDImagePiker/**/**/*.{png,jpeg,jpg,xib,xcassets}'
   
-  # s.ios.exclude_files = 'Classes/osx'  
-  # s.osx.exclude_files = 'Classes/ios'  
-  # s.public_header_files = 'Classes/**/*.{h,m}'  
-  s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit','Photos','AssetsLibrary','AVFoundation'
+  s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit','Photos','AssetsLibrary','AVFoundation','UIKit'
   s.dependency 'DDCoreCategory'
 end  
