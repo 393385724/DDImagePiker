@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
   s.name             = "DDImagePiker"  
-  s.version          = "0.0.1"  
+  s.version          = "0.0.2"  
   s.summary          = "Used for the selection of images in assetlibrary or takePhoto."  
   s.homepage         = "https://github.com/393385724/DDImagePiker"  
   # s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"  
