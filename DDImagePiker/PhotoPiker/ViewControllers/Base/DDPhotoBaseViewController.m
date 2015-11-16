@@ -56,8 +56,8 @@ NSString *const DDPhotoPikerDidCancelNotification = @"DDPhotoPikerDidCancelNotif
 }
 
 - (void)rightButtonAction{
+    [[NSNotificationCenter defaultCenter] postNotificationName:DDPhotoPikerDidCancelNotification object:nil];
     [self dismissViewControllerAnimated:YES completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:DDPhotoPikerDidCancelNotification object:nil];
     }];
 }
 

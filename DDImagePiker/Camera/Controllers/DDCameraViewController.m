@@ -130,10 +130,10 @@
 }
 
 - (void)camera:(DDAVCamera *)camera didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cameraViewController:didFinishPickingMediaWithInfo:)]) {
+        [self.delegate cameraViewController:self didFinishPickingMediaWithInfo:info];
+    }
     [self dismissViewControllerAnimated:YES completion:^{
-        if (self.delegate && [self.delegate respondsToSelector:@selector(cameraViewController:didFinishPickingMediaWithInfo:)]) {
-            [self.delegate cameraViewController:self didFinishPickingMediaWithInfo:info];
-        }
     }];
 }
 
@@ -148,10 +148,10 @@
 }
 
 - (void)cameraBottomBarCancelButtonAction{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cameraViewControllerDidCancel:)]) {
+        [self.delegate cameraViewControllerDidCancel:self];
+    }
     [self dismissViewControllerAnimated:YES completion:^{
-        if (self.delegate && [self.delegate respondsToSelector:@selector(cameraViewControllerDidCancel:)]) {
-            [self.delegate cameraViewControllerDidCancel:self];
-        }
     }];
 }
 

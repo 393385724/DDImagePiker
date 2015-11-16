@@ -57,8 +57,8 @@
     [infoDictionary setObject:image forKey:UIImagePickerControllerEditedImage];
     [infoDictionary setObject:self.photoCropView.originalImage forKey:UIImagePickerControllerOriginalImage];
     [infoDictionary setObject:NSStringFromCGRect(self.photoCropView.cropFrame) forKey:UIImagePickerControllerCropRect];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DDPhotoPikerDidFinishedImageNotification object:infoDictionary];
     [self dismissViewControllerAnimated:YES completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:DDPhotoPikerDidFinishedImageNotification object:infoDictionary];
     }];
 }
 
